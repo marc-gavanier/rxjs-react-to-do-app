@@ -1,0 +1,10 @@
+{
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "next", "prettier"],
+  "overrides": [
+    {
+      "files": ["tests/**", "**/*.spec.ts", "**/*.spec.js", "**/*.test.ts", "**/*.test.js"],
+      "plugins": ["vitest"],
+      "extends": ["plugin:vitest/legacy-recommended"]
+    }
+  ]
+}

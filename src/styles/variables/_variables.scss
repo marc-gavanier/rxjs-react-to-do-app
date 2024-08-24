@@ -1,0 +1,29 @@
+@use 'sass:color';
+
+$white: #fff;
+$black: #000;
+$light: #eff1fd;
+$component-active-color: $white;
+$spacer: 1rem;
+$font-weight-normal: 400;
+$border-radius: 0.5rem;
+$border-radius-sm: 0.25rem;
+$form-check-input-width: 1.5em;
+$form-check-input-border-radius: 0.5em;
+$form-check-input-checked-color: $component-active-color;
+$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-width='2' d='m6 10 3 3 6-6'/></svg>");
+$list-group-border-width: 0;
+$list-group-item-padding-x: $spacer * 0.5;
+$list-group-hover-bg: color.adjust($light, $lightness: 2%);
+$list-group-action-active-bg: color.adjust($light, $lightness: -3%);
+$list-group-active-color: $black;
+$list-group-active-bg: color.adjust($light, $lightness: -12%);
+$badge-font-weight: $font-weight-normal;
+$badge-border-radius: $border-radius-sm;
+
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'list-group';
+
+@import 'icons';

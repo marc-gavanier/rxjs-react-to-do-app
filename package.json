@@ -1,0 +1,53 @@
+{
+  "name": "react-rxjs-example",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest",
+    "prettier": "prettier --write ./src/",
+    "prettier.ci": "prettier --check ./src/",
+    "lint.style": "stylelint \"**/*.scss\"",
+    "lint.es": "next lint",
+    "lint.commit": "commitlint --from origin/main",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
+    "next": "14.2.6",
+    "react": "^18",
+    "react-bootstrap": "^2.10.4",
+    "react-dom": "^18",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.9.0",
+    "@testing-library/react": "^16.0.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.6",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vitest": "^0.5.4",
+    "husky": "^9.1.5",
+    "jsdom": "^24.1.1",
+    "lint-staged": "^15.2.9",
+    "prettier": "^3.3.3",
+    "sass": "^1.77.8",
+    "stylelint": "^16.8.2",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "typescript": "^5",
+    "typescript-eslint": "^8.2.0",
+    "vitest": "^2.0.5"
+  }
+}

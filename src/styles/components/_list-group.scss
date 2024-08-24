@@ -1,0 +1,7 @@
+.list-group-item {
+  border-radius: $list-group-border-radius;
+
+  &:not(:last-child) {
+    margin-bottom: $list-group-spacing;
+  }
+}
