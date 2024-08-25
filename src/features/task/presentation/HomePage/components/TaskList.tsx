@@ -1,12 +1,8 @@
 import { ListGroup } from 'react-bootstrap';
-import { Task } from '@/features/tasks/Task';
+import { Task } from '@/features/task/domain';
 import { TaskListItem } from './TaskListItem';
 
-type TaskListProps = {
-  tasks: Task[];
-};
-
-export const TaskList = ({ tasks }: TaskListProps) =>
+export const TaskList = ({ tasks }: { tasks: Task[] }) =>
   tasks.length > 0 ? (
     <ListGroup>
       {tasks.map((task) => (

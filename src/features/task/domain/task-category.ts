@@ -3,5 +3,5 @@ export type TaskCategory = {
   name: string;
   emoji: string;
   taskCount: number;
-  isActive?: boolean;
+  isActive: boolean;
 };

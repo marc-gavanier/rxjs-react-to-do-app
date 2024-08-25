@@ -1,7 +1,8 @@
 export type Task = {
   id: string;
   description: string;
-  category: { emoji: string };
+  categoryName: string;
+  emoji: string;
   dueDate: Date;
-  checked?: boolean;
+  isDone: boolean;
 };

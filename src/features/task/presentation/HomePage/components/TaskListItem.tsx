@@ -1,15 +1,20 @@
 'use client';
 
 import { Badge, ListGroup } from 'react-bootstrap';
-import { Task } from '@/features/tasks/Task';
+import { markAsDone, Task } from '@/features/task/domain';
 
-type TaskListItemProps = Task;
-
-export const TaskListItem = ({ id, description, category, dueDate, checked }: TaskListItemProps) => (
+export const TaskListItem = ({ id, description, emoji, dueDate, isDone }: Task) => (
   <ListGroup.Item className='d-flex shadow-sm'>
-    <input className='form-check-input my-auto' defaultChecked={checked} type='checkbox' value='' id={`task-${id}`} />
+    <input
+      className='form-check-input my-auto'
+      defaultChecked={isDone}
+      onClick={() => markAsDone(id)}
+      type='checkbox'
+      value=''
+      id={`task-${id}`}
+    />
     <label className='form-check-label d-flex flex-grow-1 ps-2 py-1 pe-2 align-items-center' htmlFor={`task-${id}`}>
-      <span className='me-2'>{category.emoji}</span>
+      <span className='me-2'>{emoji}</span>
       {description}
     </label>
     <Badge className='py-2' bg='light' text='muted'>

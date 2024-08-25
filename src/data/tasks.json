@@ -2,81 +2,71 @@
   {
     "id": "e0c6d8a7-9a9e-4f18-a0bc-f6b8f41e4f9c",
     "description": "Send an email to my future self asking for advice",
-    "category": {
-      "emoji": "✉️"
-    },
+    "categoryEmoji": "✉️",
+    "categoryName": "Contact️",
     "dueDate": "2024-09-17T00:00:00.000Z"
   },
   {
     "id": "2d2f76f7-3b59-4a56-9f0b-634cf4aeb07f",
     "description": "Organize my closet by the average wear time of each clothing item",
-    "category": {
-      "emoji": "🏠"
-    },
+    "categoryEmoji": "🏠",
+    "categoryName": "Home",
     "dueDate": "2024-09-20T00:00:00.000Z"
   },
   {
     "id": "96e4c6c8-6bbd-411a-92d5-5a6a56b1a1ef",
     "description": "Write a program to find the meaning of life, the universe, and everything",
-    "category": {
-      "emoji": "🖥️"
-    },
+    "categoryEmoji": "🖥️",
+    "categoryName": "Code",
     "dueDate": "2024-09-04T00:00:00.000Z"
   },
   {
     "id": "45d1b7e6-8f31-4e57-a3f1-dcb7b2a7d9f6",
     "description": "Compose haikus for every popular javascript framework",
-    "category": {
-      "emoji": "🎨"
-    },
+    "categoryEmoji": "🎨",
+    "categoryName": "Art",
     "dueDate": "2024-09-06T00:00:00.000Z"
   },
   {
     "id": "6db9d3b8-27c9-42e3-8e56-9cbe34b5e9c3",
     "description": "Sort my bookshelves by the frequency of the letter “e” in each book title",
-    "category": {
-      "emoji": "🏠"
-    },
+    "categoryEmoji": "🏠",
+    "categoryName": "Home",
     "dueDate": "2024-09-19T00:00:00.000Z"
   },
   {
     "id": "7f8c3e1d-0f14-4934-9e98-c96b94919dbe",
     "description": "Recreate the Mona Lisa using sticky notes",
-    "category": {
-      "emoji": "🎨️"
-    },
+    "categoryEmoji": "🎨",
+    "categoryName": "Art",
     "dueDate": "2024-09-09T00:00:00.000Z"
   },
   {
     "id": "8b7e9b1a-5b8e-4731-9c35-034fbe1f9f0e",
     "description": "Convince a complete stranger to switch their career to become a developer",
-    "category": {
-      "emoji": "🖥️"
-    },
+    "categoryEmoji": "🖥️",
+    "categoryName": "Code",
     "dueDate": "2024-09-11T00:00:00.000Z"
   },
   {
     "id": "3f4f7f3b-60f8-4d8e-b7c9-704a0e2e5ea9",
     "description": "Teach the cat how to code in Python",
-    "category": {
-      "emoji": "🖥️"
-    },
+    "categoryEmoji": "🖥️",
+    "categoryName": "Code",
     "dueDate": "2024-09-02T00:00:00.000Z"
   },
   {
     "id": "d1e9a567-cc61-43b8-9d5b-5d1a5171f0be",
     "description": "Reorganize the kitchen by color rather than function",
-    "category": {
-      "emoji": "🏠"
-    },
+    "categoryEmoji": "🏠",
+    "categoryName": "Home",
     "dueDate": "2024-09-01T00:00:00.000Z"
   },
   {
     "id": "d2c3c7d5-7d7a-40e3-9a87-bd3e8c8a4fd3",
     "description": "Build a miniature zipline for transporting snacks from the kitchen to the living room",
-    "category": {
-      "emoji": "🏠"
-    },
+    "categoryEmoji": "🏠",
+    "categoryName": "Home",
     "dueDate": "2024-09-20T00:00:00.000Z"
   }
 ]
