@@ -11,9 +11,6 @@ export const metadata: Metadata = {
 
 tasksProvider();
 
-const Page = async () => {
-  const defaultTasks = await firstValueFrom(tasksQuery$());
-  return <HomePage defaultTasks={defaultTasks ?? []} />;
-};
+const Page = async () => <HomePage defaultTasks={await firstValueFrom(tasksQuery$())} />;
 
 export default Page;

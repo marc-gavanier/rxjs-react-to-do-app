@@ -8,7 +8,6 @@ import { TaskCategory } from '../task-category';
 import { tasksQuery$ } from './tasks.query';
 
 const ART_TASK_CATEGORY: TaskCategory = {
-  id: '37a229f2-f551-4809-ab71-2d8c285f60b0',
   name: 'Art',
   emoji: '🎨',
   taskCount: 0,

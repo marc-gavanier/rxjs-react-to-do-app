@@ -1,20 +1,27 @@
+import { combineLatest, map, Observable, startWith, switchMap } from 'rxjs';
 import { inject } from '@/inject';
-import { TASKS_CATEGORIES$ } from '@/features/task/task.keys';
-import { combineLatest, map, startWith, switchMap } from 'rxjs';
-import { filterByTaskCategory$, TaskCategory } from '../index';
+import { TASKS$ } from '@/features/task/task.keys';
+import { filterByTaskCategory$ } from '../actions';
+import { onlyRemainingTasks, Task } from '../task';
+import { TaskCategory, toMergeTaskCategories, toToggledBy } from '../task-category';
+import { tasks$ } from './tasks.query';
 
-const EMPTY_TASK_CATEGORY_FILTER = undefined;
+const toToggledTaskCategory = ([selectedTaskCategory, taskCategories]: [
+  TaskCategory | undefined,
+  TaskCategory[]
+]): TaskCategory[] => taskCategories.map(toToggledBy(selectedTaskCategory));
 
-const toToggledBy = (filterCategory?: TaskCategory) => (category: TaskCategory) =>
-  category.id === filterCategory?.id ? { ...category, isActive: !filterCategory.isActive } : category;
+const fromTasksToTaskCategories = ([selectedTaskCategory, tasks]: [TaskCategory | undefined, Task[]]): [
+  TaskCategory | undefined,
+  TaskCategory[]
+] => [selectedTaskCategory, tasks.filter(onlyRemainingTasks).reduce(toMergeTaskCategories, [])];
 
-export const tasksCategoriesQuery$ = () =>
-  inject(TASKS_CATEGORIES$).pipe(
-    switchMap((taskCategories: TaskCategory[]) =>
-      combineLatest([filterByTaskCategory$.pipe(startWith(EMPTY_TASK_CATEGORY_FILTER))]).pipe(
-        map(([taskCategoryFilter]: [TaskCategory | undefined]): TaskCategory[] =>
-          taskCategories.map(toToggledBy(taskCategoryFilter))
-        )
+export const tasksCategoriesQuery$ = (): Observable<TaskCategory[]> =>
+  inject(TASKS$).pipe(
+    switchMap((initialTasks: Task[]) =>
+      combineLatest([filterByTaskCategory$.pipe(startWith(undefined)), tasks$.pipe(startWith(initialTasks))]).pipe(
+        map(fromTasksToTaskCategories),
+        map(toToggledTaskCategory)
       )
     )
   );

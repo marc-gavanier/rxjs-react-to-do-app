@@ -6,7 +6,7 @@ export const TaskCategoryList = ({ tasksCategories }: { tasksCategories: TaskCat
   tasksCategories.length > 0 && (
     <ListGroup>
       {tasksCategories.map((taskCategory) => (
-        <TaskCategoryItem key={taskCategory.id} {...taskCategory} />
+        <TaskCategoryItem key={`${taskCategory.emoji} ${taskCategory.name}`} {...taskCategory} />
       ))}
     </ListGroup>
   );

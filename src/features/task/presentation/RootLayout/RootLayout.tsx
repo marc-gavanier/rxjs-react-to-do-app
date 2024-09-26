@@ -2,11 +2,11 @@
 
 import { ReactNode } from 'react';
 import { Subscribe } from '@/reactivity/Subscribe';
-import { tasksCategoriesProvider } from '@/features/task';
+import { tasksProvider } from '@/features/task';
 import { TaskCategory, tasksCategoriesQuery$ } from '@/features/task/domain';
 import { TaskCategoryList } from './components/TaskCategoryList';
 
-tasksCategoriesProvider();
+tasksProvider();
 
 export const RootLayout = ({
   defaultTaskCategories,

@@ -6,10 +6,9 @@ import settings from '@/data/settings.json';
 const faviconsDirectory = path.join(process.cwd(), 'public/favicons');
 const listFilesInDirectory = (dir: string): string[] => fs.readdirSync(dir).map((file) => path.join('/favicons', file));
 
-const sizeFromFineName = (src: string): { sizes?: string } => {
-  const sizes: string | undefined = src.match(/\d+x\d+/)?.[0];
-  return sizes ? { sizes } : {};
-};
+const sizesIfDefined = (sizes: string | undefined) => (sizes ? { sizes } : {});
+
+const sizeFromFineName = (src: string): { sizes?: string } => sizesIfDefined(src.match(/\d+x\d+/)?.[0]);
 
 const webManifest = (): MetadataRoute.Manifest => ({
   name: `${settings.conferenceName} - Reactive todo app`,
